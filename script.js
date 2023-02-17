@@ -41,7 +41,7 @@ function changeColor(choice) {
 
 function clearBoard(){
     let board = document.querySelector('.board');
-    let box = document.querySelectorAll('div');
-    box.forEach((div) => div.style.backgroundColor = 'white'); 
+    let boxes = board.querySelectorAll('div');
+    boxes.forEach((div) => div.style.backgroundColor = 'white'); 
 }
     
