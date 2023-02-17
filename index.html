@@ -9,6 +9,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container"></div>
+    <div class="outer">
+        <div class="header"><h1>Etch-a-Sketch</h1></div>
+        <div class="content">
+            <div class="board"></div>
+            <div class="buttons">
+                <button onclick="changeColor('black')">Black</button>
+                <button onclick="changeColor('white')">Eraser</button>
+                <button onclick="changeColor('random')""">Random</button>
+                <button onclick="clearBoard()">Clear board</button>
+            </div>
+        </div>
+        <input type="text" placeholder="grid size from 2 to 100" value="16" onchange="changeSize(this.value), clearBoard()"/>
+        <button>Confirm</button>  
+    </div>
 </body>
 </html>
