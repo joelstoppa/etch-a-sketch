@@ -1,0 +1,16 @@
+
+.container {
+    width: 960px;
+}
+
+.row {
+    display: flex;
+}
+
+.box {
+    border: 1px solid black;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+}
