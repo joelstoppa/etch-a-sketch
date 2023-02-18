@@ -10,7 +10,7 @@ colorPicker.oninput = (e) => changeColor(e.target.value);
 
 
 function changeSizeValue(value) {
-    sizeValue.innerHTML = `Grid size is :${value} x ${value}`
+    sizeValue.innerHTML = `Grid size: ${value} x ${value}`
 }
 
 function makeGrid(size) {
@@ -25,6 +25,7 @@ function makeGrid(size) {
         let box = document.createElement('div');
         box.addEventListener('mousedown', colorSquare)
         box.addEventListener('mouseover', colorSquare)
+        box.classList.add('box')
         board.appendChild(box);
         }
     }
@@ -50,4 +51,11 @@ function clearBoard(){
     let boxes = board.querySelectorAll('div');
     boxes.forEach((div) => div.style.backgroundColor = 'white'); 
 }
-    
+
+function toggleBorder () {
+    boxes = document.querySelectorAll('.box')
+    boxes.forEach(box => {
+        box.style.border='none'
+    })
+    console.log(boxes)
+}
