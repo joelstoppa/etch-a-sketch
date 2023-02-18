@@ -23,29 +23,22 @@ function makeGrid(rowNum) {
     let gridSize = rowNum * rowNum;
     for (let i = 0; i < gridSize; i++) {
         let box = document.createElement('div');
+        box.addEventListener('mousedown', colorSquare)
         box.addEventListener('mouseover', colorSquare)
         board.appendChild(box);
-        
         }
     }
     
     makeGrid(16)
 
-// function changeSize(input) {
-//     if (input >= 2 && input <= 100 ){
-//         makeGrid(input)
-//     }
-//     else {
-//         alert('Number is too not supported')
-//     }
-    
-// }
-
-function colorSquare(){
+function colorSquare(e) {
+    if (e.buttons !== 1) return;
     if (color === 'random'){
         this.style.backgroundColor= `hsl(${Math.random() * 360}, 100%, 50%)`
     }
-    this.style.backgroundColor = color;
+    else {
+        this.style.backgroundColor = color;
+    }
 }
 
 function changeColor(choice) {
