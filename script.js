@@ -1,5 +1,8 @@
 let color = 'black';
 
+const colorPicker = document.getElementById('colorPicker')
+colorPicker.oninput = (e) => changeColor(e.target.value)
+
 function makeGrid(rowNum) {
     let board = document.querySelector('.board');
     let boxes = board.querySelectorAll('div');
@@ -11,7 +14,8 @@ function makeGrid(rowNum) {
     for (let i = 0; i < gridSize; i++) {
         let box = document.createElement('div');
         box.addEventListener('mouseover', colorSquare)
-        board.insertAdjacentElement('beforeend', box);
+        board.appendChild(box)
+        //board.insertAdjacentElement('beforeend', box);
         
         }
     }
