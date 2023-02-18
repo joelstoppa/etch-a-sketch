@@ -28,6 +28,9 @@ body {
     height: 500px;
     background-color: white;
 }
+.board div {
+    border: solid 1px black;
+}
 
 .bot {
     display: flex;
