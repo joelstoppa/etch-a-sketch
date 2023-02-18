@@ -55,7 +55,12 @@ function clearBoard(){
 function toggleBorder () {
     boxes = document.querySelectorAll('.box')
     boxes.forEach(box => {
-        box.style.border='none'
+        if (box.style.border === '') {
+            box.style.border='none';
+        }
+        else { 
+            box.style.border =''
+    }
     })
-    console.log(boxes)
+    
 }
