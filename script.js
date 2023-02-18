@@ -2,9 +2,16 @@ let color = 'black';
 
 const colorPicker = document.getElementById('colorPicker');
 const sizeSlider = document.getElementById('sizeSlider');
+const sizeValue = document.getElementById('sizeValue');
 
 sizeSlider.onchange = (e) => makeGrid(e.target.value);
+sizeSlider.onmousemove = (e) => changeSizeValue(e.target.value);
 colorPicker.oninput = (e) => changeColor(e.target.value);
+
+
+function changeSizeValue(value) {
+    sizeValue.innerHTML = `${value} x ${value}`
+}
 
 function makeGrid(rowNum) {
     let board = document.querySelector('.board');
@@ -24,15 +31,15 @@ function makeGrid(rowNum) {
     
     makeGrid(16)
 
-function changeSize(input) {
-    if (input >= 2 && input <= 100 ){
-        makeGrid(input)
-    }
-    else {
-        alert('Number is too not supported')
-    }
+// function changeSize(input) {
+//     if (input >= 2 && input <= 100 ){
+//         makeGrid(input)
+//     }
+//     else {
+//         alert('Number is too not supported')
+//     }
     
-}
+// }
 
 function colorSquare(){
     if (color === 'random'){
