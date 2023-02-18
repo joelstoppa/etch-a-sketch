@@ -10,7 +10,7 @@ colorPicker.oninput = (e) => changeColor(e.target.value);
 
 
 function changeSizeValue(value) {
-    sizeValue.innerHTML = `${value} x ${value}`
+    sizeValue.innerHTML = `Grid size is :${value} x ${value}`
 }
 
 function makeGrid(size) {

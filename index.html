@@ -10,18 +10,26 @@
 </head>
 <body>
     <div class="outer">
-        <div class="header"><h1>Etch-a-Sketch</h1></div>
+        <div class="header">
+            <h1>Etch-a-Sketch</h1>
+        </div>
         <div class="content">
-            <div class="board"></div>
-            <div class="buttons">
-                <button onclick="changeColor('white')">Eraser</button>
-                <button onclick="changeColor('random')""">Random</button>
-                <button onclick="clearBoard()">Clear board</button>
+            <div class="top">
+                <div class="board"></div>
+            </div>
+            <div class="bot">
+                <div class="buttons">
+                    <button id="eraser" onclick="changeColor('white')">Eraser</button>
+                    <button id="random" onclick="changeColor('random')""">Random</button>
+                    <button id="clear" onclick="clearBoard()">Clear board</button>
+                </div>
+                <div class="sizing">
+                    <div id="sizeValue">Grid size: 16 x 16</div>
+                    <input id ="sizeSlider" type="range" value="16" min="2" max="100">
+                </div>
+                <input id="colorPicker" type="color" />
             </div>
         </div>
-        <div id="sizeValue">16 x 16</div>
-        <input id ="sizeSlider" type="range" value="16" min="2" max="100">
-        <input id="colorPicker" type="color" />
     </div>
 </body>
 </html>
