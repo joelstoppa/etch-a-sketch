@@ -13,14 +13,14 @@ function changeSizeValue(value) {
     sizeValue.innerHTML = `${value} x ${value}`
 }
 
-function makeGrid(rowNum) {
+function makeGrid(size) {
     let board = document.querySelector('.board');
     let boxes = board.querySelectorAll('div');
     boxes.forEach((div) => div.remove()); //this clears the board when we changeSize
-    board.style.gridTemplateColumns = `repeat(${rowNum}, 1fr`;
-    board.style.gridTemplateRows = `repeat(${rowNum}), 1fr`;
+    board.style.gridTemplateColumns = `repeat(${size}, 1fr`;
+    board.style.gridTemplateRows = `repeat(${size}), 1fr`;
     
-    let gridSize = rowNum * rowNum;
+    let gridSize = size * size;
     for (let i = 0; i < gridSize; i++) {
         let box = document.createElement('div');
         box.addEventListener('mousedown', colorSquare)
